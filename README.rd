@@ -3,7 +3,10 @@
 This is an unofficial [Heroku buildpack](https://devcenter.heroku.com/articles/buildpacks)
 that supports [maxminddb](https://github.com/yhirose/maxminddb) ruby gem.
 
-define `GEOIP_DB_PUBLIC_URI` ENV variable from where to fetch the files.
+Define `GEOIP_DB_PUBLIC_URI` ENV variable from where to fetch the files.
+
+A separate process should be placing the files there once a day/week. Depends on the update frequency.
+
 Files should be in .tar.gz format:
 
 ```
